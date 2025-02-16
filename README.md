@@ -2,10 +2,6 @@
 
 A simple static clone of the **Spotify Home Page** built using **HTML & CSS**. This project replicates the UI of Spotify's homepage with a focus on responsiveness and design.
 
-## 🚀 Live Demo  
-
-Click the link above to view the deployed website.
-
 ## 📸 Preview  
 ![Screenshot 2025-02-16 211812](https://github.com/user-attachments/assets/671c462a-c64d-434e-b207-4ea366ddda95)
 ![Screenshot 2025-02-16 211822](https://github.com/user-attachments/assets/aeffbc46-087d-4082-81d4-1d58f08c1a89)  
