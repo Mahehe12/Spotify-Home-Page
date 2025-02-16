@@ -1,0 +1,342 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden; /*Jab humara content overflow ota hai like, Humari set space ya screen ke bahar jaata hai
+                        toh we use overflow jismian we can control if we want to let user scroll down to see content
+                        ya we want to keep it hidden */
+}
+.main{
+    display: flex;
+    height: 100vh; /*100% of viewport height */
+    padding: 0.5rem;
+}
+
+.sidebar{
+    background-color: #000; /*color-picker */
+    width: 340px;
+    border-radius: 1rem; /* 1 rem= 16 px */
+    margin-right: 0.5rem;
+}
+.main-content{
+    background-color: #121212;
+    flex: 1; /* Baaki ke jo div hai flexbox main unko content ke acc jgh de do baaki ki width mujhe de do */
+    border-radius: 1rem;
+    overflow: auto; /*Jab zarurat ho tabhi scroll hoga */
+    padding: 0 1.5rem 0 1.5rem;
+}
+.music-player{
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    height: 72px;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav{
+    color: #121212;
+    border-radius: 1rem;
+    margin: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem; /*responsive bana ne ke liye rem main use kiya 0.5 rem= 8px */
+    /* padding-top: 1rem; */
+}
+.nav-option{
+    color: #fff;
+    line-height: 2.5rem; /* kisi bhi spacong main line */
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+.nav-option:hover{
+    opacity: 1;
+}
+.nav-option i{
+    font-size: 1.25rem;
+}
+.nav-option a{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+
+.library{
+    color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lib-option img{
+    height: 1.5rem;
+    width: 1.25rem;
+}
+
+
+.icons{
+    font-size: 1.25rem;
+    color: #fff;
+    opacity: 0.7;
+    margin-right: 1rem;
+    display: flex;
+}
+.icons i{
+    opacity: 0.7;
+    margin-right: 0.75rem;
+}
+.icons i:hover{
+    opacity: 1;
+}
+
+
+
+.box{
+    height: 8rem;
+    background-color: #232323;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0 2rem 0;
+    padding: 0.25rem 0.75rem;
+}
+.box-p1{
+    font-size: 1rem ;
+    color: #fff;
+    font-weight: 500;
+}
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.9;
+    color: #fff;
+}
+.badge{
+    background-color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 0 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 1.75rem;
+    width: fit-content;
+}
+.dark-badge{
+    background-color: #000;
+    color: #fff;
+}
+
+.sticky-nav{
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    z-index: 10;
+}
+.sticky-nav-icons{
+    margin-left: 0.75rem;
+}
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item{
+    margin-right: 1rem ;
+}
+
+@media (max-width: 1000px) {
+    .hide{
+        display: none;
+    }
+}
+
+.card{
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+.card-container{
+    display: flex;
+    border-radius: 0.5rem;
+    flex-wrap: wrap;
+}
+.card-img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+
+.footer{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+.line{
+    height: 50%;
+    width: 90%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+
+.music-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album{
+    width: 25%;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.album-cover img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+.album-icon{
+    background-color: transparent;
+    border: none;
+    color: hsla(0,0%,100%,.7);
+    height: 32px;
+    min-width: 32px;
+}
+.album-info {
+    display: flex;
+    flex-direction: column;
+}
+.album-name{
+    font-size: 16px;
+    color: #ddd;
+}
+.album-artist{
+    font-size: 14px;
+    color: #b3b3b3;
+    opacity: 0.7;
+} 
+.album-name, .album-artist {
+  margin: 0;
+}
+  
+
+  
+.control {
+    width: 25%;
+    bottom: 20px;
+    right: 20px;
+    color: #282828;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.control-icon img {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    opacity: 0.7;
+    height: 24px;
+    min-width: 32px;
+    width: 24px
+}
+.control-player img {
+    background-color: transparent;
+    border: none;
+    color: #b3b3b3;
+    opacity: 0.7;
+    height: 32px;
+    width: 32px;
+}
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.progress-bar {
+    width: 100px;
+    height: 6px;
+    appearance: none;
+    background-color: #fff;
+    outline: none;
+    border-radius: 5px;
+}
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.player{
+    width: 50%;
+}
+.player-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player-control-icon{
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+.player-control-icon:hover{
+    opacity: 1;
+}
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{
+    width: 70%;
+    appearance: none; /*Yeh kuch set property hata dega like button create krte hi ek boundary aati hai */
+    background-color: transparent;
+    cursor: pointer;
+}
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    background-color: #1bd701;
+    border-radius: 50%;
+    margin-top: -6px;
+}
